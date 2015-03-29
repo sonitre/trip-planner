@@ -4,6 +4,7 @@ $link-active: lighten($main-color, 50%);
 $text-color: darken($main-color, 10%);
 
 $screen-md: 992px;
+$screen-sm: 991px;
 
 body {
 	padding-top: 50px;
@@ -189,7 +190,7 @@ select {
 }
 
 #map-canvas {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 250px);
 }
 
 @media (min-width: $screen-md) {

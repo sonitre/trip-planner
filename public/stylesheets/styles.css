@@ -132,7 +132,7 @@ select {
   padding: 3px 0; }
 
 #map-canvas {
-  height: calc(100vh - 150px); }
+  height: calc(100vh - 250px); }
 
 @media (min-width: 992px) {
   #map-canvas {
