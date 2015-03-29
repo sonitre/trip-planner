@@ -1,0 +1,156 @@
+body {
+  padding-top: 50px;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #1b525b;
+  background: #e4f4f7; }
+
+h2 {
+  margin: 10px 0;
+  font-weight: 700; }
+
+select {
+  width: calc(100% - 25px);
+  margin-bottom: 10px;
+  -webkit-appearance: menulist-button; }
+
+.navbar {
+  background: #277582;
+  border-color: #1b525b; }
+
+.navbar .navbar-nav > li > a, .navbar .navbar-brand {
+  color: #99c571; }
+  .navbar .navbar-nav > li > a:hover, .navbar .navbar-brand:hover {
+    color: #bde5eb; }
+  .navbar .navbar-nav > li > a:focus, .navbar .navbar-brand:focus {
+    color: #bde5eb; }
+
+.navbar .navbar-nav > li > a:hover {
+  color: #bde5eb; }
+.navbar .navbar-nav > li > a:focus {
+  color: #bde5eb; }
+
+.navbar .navbar-nav > .active > a {
+  box-shadow: inset 0 0 10px #154047;
+  background: #21636e;
+  color: #bde5eb; }
+  .navbar .navbar-nav > .active > a:hover {
+    background: #1b525b;
+    box-shadow: inset 0 0 10px #0f2e34;
+    color: #bde5eb; }
+
+.navbar .navbar-toggle .icon-bar {
+  background: #8CBE5F; }
+
+.navbar .navbar-toggle:hover .icon-bar {
+  background: #bde5eb; }
+
+.navbar-collapse .navbar-nav a:hover {
+  background: #3398a9; }
+
+.glyph-logo {
+  margin-right: 10px; }
+
+.panel-header {
+  text-align: center; }
+  .panel-header h1 {
+    width: 90%;
+    font-size: 24px;
+    padding: 5px 15px;
+    margin: 10px 0;
+    border: 1px solid #277582;
+    border-radius: 5px;
+    display: inline-block; }
+    .panel-header h1 > * {
+      margin: 0 5px;
+      vertical-align: middle;
+      display: inline-block; }
+
+.panel {
+  border: none;
+  border-radius: 10px;
+  background: #8CBE5F; }
+
+.btn {
+  width: 20px;
+  height: 20px;
+  color: #f8fcfd;
+  text-align: center;
+  padding: 1px 0 0 0;
+  font-size: 8px;
+  border-radius: 10px; }
+  .btn:hover, .btn:focus {
+    color: #f8fcfd; }
+
+.add-button {
+  border-color: transparent;
+  background: #3398a9; }
+  .add-button:hover, .add-button:focus {
+    border-color: transparent;
+    background: #47b5c8; }
+
+.remove-button {
+  border-color: transparent;
+  background: #C86161; }
+  .remove-button:hover, .remove-button:focus {
+    border-color: transparent;
+    background: #d58787; }
+
+.day-btn {
+  width: 35px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  color: #8CBE5F;
+  padding: 0;
+  margin: 0 2px;
+  border-color: #8CBE5F;
+  border-radius: 17.5px;
+  background: #277582; }
+  .day-btn:hover, .day-btn:focus {
+    color: #bde5eb;
+    border-color: #bde5eb; }
+
+.current-day {
+  color: #277582;
+  background: #8CBE5F; }
+
+.item-label {
+  font-size: 16px; }
+
+.chosen-list {
+  padding-left: 0;
+  margin-bottom: 20px;
+  list-style: none; }
+
+.choice-title {
+  display: inline; }
+
+.itinerary-item {
+  padding: 3px 0; }
+
+#map-canvas {
+  height: calc(100vh - 150px); }
+
+@media (min-width: 992px) {
+  #map-canvas {
+    border-bottom: none;
+    border-left: none;
+    height: calc(100vh - 50px); }
+  .map-container {
+    padding: 0; }
+    .map-container > div {
+      position: fixed;
+      width: inherit; } }
+
+#day-buttons {
+  padding: 8px 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #277582; }
+
+#add-day-button {
+  font-size: 10px;
+  padding: 0 0 1px 1px; }

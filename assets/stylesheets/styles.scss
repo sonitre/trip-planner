@@ -1,0 +1,220 @@
+$main-color: #277582;
+$accent-color: #8CBE5F;
+$link-active: lighten($main-color, 50%);
+$text-color: darken($main-color, 10%);
+
+$screen-md: 992px;
+
+body {
+	padding-top: 50px;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	color: $text-color;
+	background: lighten($main-color, 60%)
+}
+
+h2 {
+	margin: 10px 0;
+	font-weight: 700;
+}
+
+select {
+  width: calc(100% - 25px);
+  margin-bottom: 10px;
+  -webkit-appearance: menulist-button;
+}
+
+.navbar {
+	background: $main-color;
+	border-color: darken($main-color, 10%);
+}
+
+.navbar .navbar-nav > li > a, .navbar .navbar-brand {
+	color: lighten($accent-color, 5%);
+
+	&:hover {
+		color: $link-active;
+	}
+
+	&:focus {
+		color: $link-active;
+	}
+}
+
+.navbar .navbar-nav > li > a {
+	&:hover {
+		color: $link-active;
+	}
+	&:focus {
+		color: $link-active;
+	}
+}
+
+.navbar .navbar-nav > .active > a {
+	box-shadow: inset 0 0 10px darken($main-color, 15%);
+	background: darken($main-color, 5%);
+	color: $link-active;
+
+	&:hover {
+		background: darken($main-color, 10%);
+		box-shadow: inset 0 0 10px darken($main-color, 20%);
+		color: $link-active;
+	}
+}
+
+.navbar .navbar-toggle .icon-bar {
+	background: $accent-color;
+}
+
+.navbar .navbar-toggle {
+	&:hover {
+
+		.icon-bar {
+			background: $link-active;
+		}
+	}
+}
+
+.navbar-collapse .navbar-nav {
+	a:hover {
+		background: lighten($main-color, 10%);
+	}
+}
+
+.glyph-logo {
+	margin-right: 10px;
+}
+
+.panel-header {
+	text-align: center;
+
+	h1 {
+		width: 90%;
+		font-size: 24px;
+		padding: 5px 15px;
+		margin: 10px 0;
+		border: 1px solid $main-color;
+		border-radius: 5px;
+		display: inline-block;
+
+		> * {
+			margin: 0 5px;
+	    	vertical-align: middle;
+	    	display: inline-block;
+		}
+	}
+}
+
+.panel {
+	border: none;
+	border-radius: 10px;
+	background: $accent-color;
+}
+
+.btn {
+	width: 20px;
+	height: 20px;
+	color: lighten($link-active, 15%);
+	text-align: center;
+	padding: 1px 0 0 0;
+	font-size: 8px;
+	border-radius: 10px;
+
+	&:hover, &:focus {
+		color: lighten($link-active, 15%);
+	}
+}
+
+.add-button {
+	border-color: transparent;
+	background: lighten($main-color, 10%);
+
+	&:hover, &:focus {
+		border-color: transparent;
+		background: lighten($main-color, 20%);
+	}
+}
+
+.remove-button {
+	border-color: transparent;
+	background: #C86161;
+
+	&:hover, &:focus {
+		border-color: transparent;
+		background: lighten(#C86161, 10%);
+	}
+}
+
+.day-btn {
+	width: 35px;
+	height: 35px;
+	font-size: 17px;
+	font-weight: 700;
+	text-align: center;
+	color: $accent-color;
+	padding: 0;
+	margin: 0 2px;
+	border-color: $accent-color;
+	border-radius: 17.5px;
+	background: $main-color;
+
+	&:hover, &:focus {
+		color: $link-active;
+		border-color: $link-active;
+	}
+}
+
+.current-day {
+	color: $main-color;
+	background: $accent-color;
+}
+
+.item-label {
+	font-size: 16px;
+}
+
+.chosen-list {
+	padding-left: 0;
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+.choice-title {
+	display: inline;
+}
+
+.itinerary-item {
+	padding: 3px 0;
+}
+
+#map-canvas {
+  height: calc(100vh - 150px);
+}
+
+@media (min-width: $screen-md) {
+  #map-canvas {
+    border-bottom: none;
+    border-left: none;
+    height: calc(100vh - 50px);
+  }
+  .map-container {
+    padding: 0;
+    > div {
+      position: fixed;
+      width: inherit;
+    }
+  }
+}
+
+#day-buttons {
+	padding: 8px 15px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: $main-color;
+}
+
+#add-day-button {
+	font-size: 10px;
+	padding: 0 0 1px 1px;
+}

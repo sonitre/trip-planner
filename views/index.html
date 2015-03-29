@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block title %} - Home{% endblock %}
+
+{% block content %}
+<div id="trip-planner">
+	<div class="map-container col-md-8 col-lg-9">
+		<div>
+			<div id="map-canvas"></div>
+		</div>
+	</div> <!-- close map-container -->
+	<div id="control-panel" class="col-md-4 col-lg-3">
+		<div class="col-sm-6 col-md-12">
+			<div class="panel-header">
+				<h1><span>Plan Your Day</span></h1>
+			</div>
+			<div id="selector-panel" class="panel">
+				<div class="panel-body">
+					<div id="hotel-options" class="item-options">
+						<h2 class="item-label">Hotels</h2>
+						<select>
+							{% for hotel in hotels %}
+							<option value="{{hotel.name}}">{{hotel.name}}</option>
+							{% endfor %}
+						</select>
+						<button class="btn pull-right add-button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+					</div>
+					<div id="restaurant-options" class="item-options">
+						<h2 class="item-label">Restaurants</h2>
+						<select>
+							{% for restaurant in restaurants %}
+							<option value="{{restaurant.name}}">{{restaurant.name}}</option>
+							{% endfor %}
+						</select>
+						<button class="btn pull-right add-button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+					</div>
+					<div id="activity-options" class="item-options">
+						<h2 class="item-label">Things To Do</h2>
+						<select>
+							{% for thingToDo in thingsToDo %}
+							<option value="{{thingToDo.name}}">{{thingToDo.name}}</option>
+							{% endfor %}
+						</select>
+						<button class="btn pull-right add-button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+					</div>
+				</div> <!-- close selector panel-body -->
+			</div> <!-- close selector-panel -->
+		</div>
+		<div class="col-sm-6 col-md-12">
+			<div class="panel-header">
+				<h1>
+					<span id="day-name">Day 1</span>
+					<button id="remove-day-button" class="btn remove-button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+				</h1>
+			</div>
+			<div id="itinerary-panel" class="panel">
+				<div id="day-buttons">
+					<button class="btn day-btn select-day current-day">1</button><button id="add-day-button" class="btn day-btn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+				</div>
+				<div class="panel-body">
+					<div id="hotel-itinerary">
+						<h2 class="item-label">My Hotel</h2>
+						<ul class="chosen-list">
+						</ul>
+					</div>
+					<div id="restaurant-itinerary">
+						<h2 class="item-label">My Restaurants</h2>
+						<ul class="chosen-list">
+						</ul>
+					</div>
+					<div id="activity-itinerary">
+						<h2 class="item-label">My Things To Do</h2>
+						<ul class="chosen-list">
+						</ul>
+					</div>
+				</div> <!-- close itinerary panel-body -->
+			</div> <!-- close itinerary-panel -->
+		</div>
+	</div> <!-- close control-panel -->
+</div> <!-- close trip-planner -->
+
+
+
+<script>
+	{% autoescape false %}
+	var all_hotels = {{ hotels | json }};
+	var all_restaurants = {{ restaurants | json }};
+	var all_things_to_do = {{ thingsToDo | json }};
+	{% endautoescape %}
+</script>
+{% endblock %}

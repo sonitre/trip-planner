@@ -1,0 +1,20 @@
+{
+  "name": "trip-planner",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -e js,html,scss app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "bluebird": "^2.9.16",
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "3.8",
+    "morgan": "^1.5.2",
+    "node-sass-middleware": "^0.5.0",
+    "swig": "^1.4.2"
+  }
+}

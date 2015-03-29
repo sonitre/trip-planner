@@ -1,0 +1,20 @@
+{
+  "name": "trip-planner",
+  "version": "0.0.0",
+  "authors": [
+    "Jimmy Farrell <jfarrell22@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.3"
+  }
+}
