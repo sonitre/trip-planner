@@ -47,6 +47,9 @@ $(document).ready(function() {
     });
 
     $('#remove-day-button').on('click', function() {
+        var numberOfDays = $('#add-day-button').siblings().length;
+        if (currentDay === 1 && numberOfDays === 1) return;
+
         removeDayItineraryAndMarkers();
 
         days.splice(currentDay - 1, 1);
