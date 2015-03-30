@@ -4,6 +4,7 @@ var router = require('express').Router(),
 
 // Home Page
 router.get('/', function(req, res, next) {
+	console.log('hi.');
 	var getData = [
 		models.Hotel.find({}).exec(),
 		models.Restaurant.find({}).exec(),

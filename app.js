@@ -4,6 +4,7 @@ var express = require('express'),
 	swig = require('swig'),
 	nodeSass = require('node-sass-middleware');
 
+
 // Instantiate app
 var app = express();
 
@@ -30,7 +31,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Route handling
-app.get('/', require('./routes'));
+app.use('/', require('./routes'));
+app.use('/days', require('./routes/days'));
 
 // No routes were hit > 404 status
 app.use(function(req, res, next) {
